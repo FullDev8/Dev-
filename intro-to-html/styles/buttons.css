@@ -1,0 +1,45 @@
+
+
+.button{
+    color: rgb(0, 113, 133);
+}
+
+.p-price{
+    color: rgb(0,118,0);
+    font-weight: bold;
+}
+
+.button-addtocart{
+    background-color: rgb(255, 216, 20);
+    border: none;
+    border-radius: 15px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.25s;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.button-addtocart:hover{
+    opacity: 0.8;
+}
+.button-addtocart:active{
+    opacity: 0.4;;
+}
+.button-buynow{
+    background-color: rgb(255, 164, 28);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer; 
+    font-weight: bold;
+    transition: box-shadow 0.20s;
+    padding: 10px 16px 10px 16px;
+}
+.button-buynow:hover{   
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.button-buynow:active{
+    opacity: 0.4;
+} 
