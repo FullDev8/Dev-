@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+    <link rel="stylesheet" href="--ALL-DESIGN/All.css">
+    <link rel="stylesheet" href="design-css/pos.css">
+    <title>POS | IMS</title>
+</head>
+<body>
+  <div class="container" id="blur">
+    <!------------------------LEFT-------------------------->
+    
+    <aside id="side" class="side">
+      <div class="top">
+        <div class="logo">
+          <img src="all-images/Business-logo.jpeg" width="50px">
+          <h2>VISPO</h2>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        <a href="index.html">
+          <span>
+            <img src="dashboard-icons/health-data.png"/>
+          </span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="pos.html" class="active">
+          <span>
+            <img src="dashboard-icons/bill.png"/>
+          </span>
+          <h3>POS</h3>
+        </a>
+        <a href="transaction.html">
+          <span>
+            <img src="all-icons/bill.png"/>
+          </span>
+          <h3>Transaction</h3>
+        </a>
+        <a href="stocks.html">
+          <span>
+            <img src="dashboard-icons/cubes.png"/>
+          </span>
+          <h3>Stocks</h3>
+        </a>
+        <a href="supplier.html">
+          <span>
+            <img src="all-icons/supplier.png"/>
+          </span>
+          <h3>Supplier</h3>
+        </a>
+        <a href="employee.html">
+          <span>
+            <img src="dashboard-icons/team.png"/>
+          </span>
+          <h3>Employee</h3>
+        </a>
+        <a href="reports.html">
+          <span>
+            <img src="dashboard-icons/report.png"/>
+          </span>
+          <h3>Reports</h3>
+        </a>
+        <a href="accounts.html">
+          <span>
+            <img src="all-icons/skills.png"/>
+          </span>
+          <h3>Accounts Setting</h3>
+        </a>
+        <a href="#">
+          <span>
+            <img src="dashboard-icons/log-out.png"/>
+          </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+    
+    <!-----------------------MAIN---------------------------------->
+    <main>
+      <!--Main top-->
+      <div class="main-top">
+        <div class="full-width">
+          <img id="menu" src="all-icons/full-width.png"/>
+        </div>
+      <!--
+        <div class="search-box">
+          <img class="search-icon" src="products-icons/search.png"/>
+          <input class="typeahead tt-query search-bar" spellcheck="false" autocomplete="off" name="typeahead" type="text" placeholder="Search by item or category">
+        </div>
+        <div class="search-button">
+          <button class="search-btn">Filter</button>
+        </div>
+      -->
+      </div>
+      <!--Main product-->
+      <div id="product-cart" class="main-content">
+        <!-- Product Cart Container -->
+      </div>
+    </main>
+
+
+    <!-------------------------------------RIGHT------------------------------------------->
+  <div class="right-section">
+        <!--Right top-->
+        <div class="top">
+          <div class="profile">
+            <div class="info">
+              <p>I'm <b>Ivan Vispo</b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+              <img src="all-images/Ivan Vispo Admin Profile.jpg"/>
+            </div>
+          </div>
+        </div>
+
+    <!--Right process-->
+    <div class="product-process">
+      <h2 class="cart-title">Current Order</h2>
+      <input type="text" id="idproduct" hidden>
+      
+      <div id="current-date">
+        <!-- Data -->
+      </div>
+
+      <div id="current-time">
+        <!-- Data -->
+      </div>
+
+      <div id="cart-content" class="cart-content">
+        <!-- Data -->
+      </div>
+
+      <!--Total-->
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">0</div>
+      </div>
+
+      <!-- Cash Amount -->
+      <div class="cash-amount">
+        <button id="reset-array" class="reset">Reset</button>
+        <input id="amount" class="amount" type="number">
+        <button id="payment">Payment</button>
+      </div>
+
+      <!-- Change Due -->
+      <div class="change-due">
+        <h3 class="change">Change:</h3>
+        <div id="total-change" class="total-change">₱0</div>
+      </div>
+
+      <!--Buy button-->
+      <div class="total-button">
+        <button type="button" class="btn-buy">
+          Print Bills
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="cart-select" class="cart-select">
+  <!-- Cart Select -->
+</div>
+
+
+  <!------------------------- LINK JS FILE ---------------------->
+  <!--<script src="--POS/pos.js"></script>-->
+  <script src="--ALL-FUNCTIONALITY/All.js"></script>
+  <script src="src/pointOfSale.js"></script>
+  <!--<script src="--POS/transaction-receipt.css"></script>-->
+  <script src=""http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js""></script>
+  <script src="typeahead.min.js" type="text/javascript"></script>
+</body>
+</html>

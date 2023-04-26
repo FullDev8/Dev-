@@ -1,0 +1,334 @@
+
+.container {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  width: 96%;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+/* ----------------------MAIN------------------ */
+main {
+	margin-top: 20px;
+}
+
+/* Top */
+.top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+
+  background-color: #fff;
+  padding: 8px 12px;
+}
+
+/*-------------------------------------- Supplier List--------------------------------------- */
+.supplier-list {
+	margin-top: 30px;
+	padding: 15px 20px;
+	background-color: var(--color-white);
+}
+
+.supplier-list.active {
+	display: none;
+}
+
+.cont-top .entries-search{
+	display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.entries-search .search-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+}
+
+.supplier-list input[type=search] {
+	border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+.cont-top .search {
+	background-color: rgb(188, 81, 81);
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+/*------ Tables design -------*/
+.add {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	gap: 10px;
+	border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+.add .add-product {
+	background-color: rgb(198, 82, 82);
+	color: var(--color-white);
+	padding: 3px 6px;
+	font-size: 11px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+/* Table */
+.main-table table {
+	width: 100%;
+	text-align: center;
+}
+
+.main-table tbody td {
+	height: 2.8rem;
+	border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+	color: var(--color-dark-variant);
+}
+
+	tbody {
+    display: block;
+    height: 315px;
+    overflow: auto;
+  }
+
+  thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;/* even columns width , fix width of table too*/
+  }
+
+  thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+  }
+
+  table {
+    width: 400px;
+  }
+
+/* Entries Indicator */
+.btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
+
+	padding: 15px 22px;
+}
+
+.prev-btn, .next-btn {
+	background-color: #fff;
+	color: var(--color-dark-variant);
+}
+
+.prev-btn {
+	font-size: 13px;
+	border: 1px solid rgba(21, 21, 21, 0.4);
+	border-right: none;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+.next-btn {
+	font-size: 13px;
+	border: 1px solid rgba(21, 21, 21, 0.4);
+	border-left: none;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+.count {
+	background-color: rgb(198, 82, 82);
+	color: white;
+	padding: 2px 6px;
+	border-top: 1px solid rgba(21, 21, 21, 0.4);
+	border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+}
+
+input[type="text"] {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 2px;
+}
+
+/*-------------------------------------- Add Employee Form -----------------------------------------*/
+
+.container.active {
+	filter: opacity(30%);
+	pointer-events: none;
+	user-select: none;
+}
+
+.add-employee-information {
+	border-radius: 5px;
+	border: 1px solid rgb(15, 15, 15);
+	background-color: #fff;
+	
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 500px;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.add-employee-information.active {
+	top: 50%;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+/*--Customer header--*/
+.add-employee-information .employee-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: rgb(198, 82, 82);
+}
+
+.add-employee-information .employee-header h3 {
+display: inline-block;
+color: #fff;
+padding: 10px 15px;
+}
+
+.add-employee-information .employee-header img {
+width: 10px;
+cursor: pointer;
+margin-right: 10px;
+}
+
+/*--Customer body--*/
+.add-employee-information .employee-body {
+padding: 20px 10px;
+border-bottom: 2px solid rgb(112, 109, 109);
+}
+
+.add-employee-information .employee-body form input[type="text"] {
+width: 80%;
+}
+
+.add-employee-information .employee-body form input[type="number"],
+.add-employee-information .employee-body form input[type="date"] {
+display: block;
+}
+
+.add-employee-information .employee-body h3 {
+padding-top: 10px ;
+padding-left: 15px;
+}
+
+.add-employee-information .employee-body .form-group {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 13px;
+padding-bottom: 13px;
+}
+
+.add-employee-information .employee-body span {
+font-size: 12px;
+}
+
+.add-employee-information .employee-body input {
+border: 1px solid rgb(187, 187, 187);
+border-radius: 5px;
+padding: 10px 12px;
+}
+
+/*--Customer footer--*/
+.add-employee-information .employee-footer {
+display: flex;
+align-items: center;
+justify-content: end;
+padding: 10px 15px;
+}
+
+.add-employee-information .employee-footer button {
+margin-right: 10px;
+}
+
+.add-employee-information .employee-footer .employee-close-btn {
+padding: 8px 12px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 300ms ease;
+}
+
+.add-employee-information .employee-footer .employee-close-btn:hover {
+color: rgb(198, 82, 82);
+}
+
+.add-employee-information .employee-footer input[type="submit"] {
+background-color: rgb(198, 82, 82);
+color: #fff;
+padding: 8px 12px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 300ms ease;
+}
+
+.add-employee-information .employee-footer input[type="submit"]:hover {
+background: rgb(198, 82, 82);
+}
+
+.add-employee-information select {
+	background: transparent;
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 18px;
+}
+
+/* Operation */
+.view {
+	background-color: rgb(50, 69, 234);
+	padding: 3px 7px;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+	cursor: pointer;
+  }
+  
+  .edit {
+	background-color: rgb(41, 145, 84);
+	padding: 3px 7px;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+	cursor: pointer;
+  }
+  
+  .delete {
+	background-color: rgb(198, 82, 82);
+	padding: 3px 7px;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+	cursor: pointer;
+  }
+

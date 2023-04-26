@@ -1,0 +1,106 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    width: 96%;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+aside.active {
+  display: none;
+}
+
+/* ----------------------MAIN------------------ */
+main {
+	margin-top: 20px;
+}
+
+/* Top */
+.top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  padding: 8px 12px;
+}
+
+/* Dark and Night mode */
+.top-right .theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+
+.top-right .theme-toggler span {
+  font-size: 13px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right .theme-toggler span.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+
+.top-right button {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+/* ---------------CONT------------- */
+
+
+
+/*--------------- MEDIA QUERIES ------------*/
+/*---- For Mobile Phone ------*/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
+  aside {
+    position: fixed;
+    left: -100%;
+    background-color: var(--color-white);
+    width: 200px;
+    z-index: 100;
+    box-shadow: 10px 37px 52px var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+}

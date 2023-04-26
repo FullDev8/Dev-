@@ -1,0 +1,198 @@
+
+.container {
+  display: grid;
+	grid-template-columns: 190px 1fr;
+	width: 96%;
+	margin: 0 auto;
+	gap: 25px;
+}
+
+/* ----------------------MAIN------------------ */
+main {
+	margin-top: 20px;
+}
+
+/* Top */
+.top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  padding: 8px 12px;
+}
+
+.top-right button {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+/* ------------------CONTENT----------------- */
+
+.transac-cont {
+  margin-top: 30px;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+}
+
+.cont-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  height: 50px;
+  border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+.cont-top input[type="date"] {
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+.cont-top .search-btn {
+  background-color: rgb(198, 82, 82);
+  color: var(--color-white);
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.clear-date {
+  display: flex;
+  justify-content: end;
+  padding: 10px 0px;
+}
+
+.clear-date .clear {
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+.clear-date .clear-btn {
+  background-color: var(--color-white);
+  color: rgb(198, 82, 82);
+  padding: 3px 5px;
+  border: 1px solid rgb(198, 82, 82);
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* Table */
+.main-table table {
+  width: 100%;
+  text-align: center;
+}
+
+.main-table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+  color: var(--color-dark-variant);
+}
+
+tbody {
+  display: block;
+  height: 350px;
+  overflow: auto;
+}
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;/* even columns width , fix width of table too*/
+}
+thead {
+  width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+  width: 400px;
+}
+
+.transac-cont .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+
+  padding: 15px 22px;
+}
+
+.prev-btn, .next-btn {
+  background-color: #fff;
+  color: var(--color-dark-variant);
+}
+
+.prev-btn {
+  font-size: 13px;
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-right: none;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.next-btn {
+  font-size: 13px;
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-left: none;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.count {
+  background-color: rgb(198, 82, 82);
+  color: white;
+  padding: 2px 6px;
+  border-top: 1px solid rgba(21, 21, 21, 0.4);
+  border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+}
+
+.delete {
+  background-color: rgb(198, 82, 82);
+  padding: 3px 7px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/*--------------- MEDIA QUERIES ------------*/
+/*---- For Mobile Phone ------*/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
+  aside {
+    position: fixed;
+    left: -100%;
+    background-color: var(--color-white);
+    width: 200px;
+    z-index: 100;
+    box-shadow: 10px 37px 52px var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+}

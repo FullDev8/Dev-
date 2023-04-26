@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="--ALL-DESIGN/All.css">
+    <link rel="stylesheet" href="./design-css/stocks.css">
+    <link rel="stylesheet" href="--STOCKS/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Stocks | IMS</title>
+</head>
+<body>
+  <div class="container" id="background">
+
+    <!-- Side Top -->
+    <aside id="side">
+        <div class="top">
+          <div class="logo">
+            <img src="all-images/Business-logo.jpeg" width="50px">
+            <h2>VISPO</h2> 
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+
+        <!-- Side Nav -->
+        <div class="sidebar">
+          <a href="index.html">
+            <span>
+              <img src="dashboard-icons/health-data.png"/>
+            </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="pos.html">
+            <span>
+              <img src="dashboard-icons/bill.png"/>
+            </span>
+            <h3>POS</h3>
+          </a>
+          <a href="transaction.html">
+            <span>
+              <img src="all-icons/bill.png"/>
+            </span>
+            <h3>Transaction</h3>
+          </a>
+          <a href="stocks.html" class="active">
+            <span>
+              <img src="dashboard-icons/cubes.png"/>
+            </span>
+            <h3>Stocks</h3>
+          </a>
+          <a href="supplier.html">
+            <span>
+              <img src="all-icons/supplier.png"/>
+            </span>
+            <h3>Supplier</h3>
+          </a>
+          <a href="employee.html">
+            <span>
+              <img src="dashboard-icons/team.png"/>
+            </span>
+            <h3>Employee</h3>
+          </a>
+          <a href="reports.html">
+            <span>
+              <img src="dashboard-icons/report.png"/>
+            </span>
+            <h3>Reports</h3>
+          </a>
+          <a href="accounts.html">
+            <span>
+              <img src="all-icons/skills.png"/>
+            </span>
+            <h3>Accounts Settings</h3>
+          </a>
+          <a href="#">
+            <span>
+              <img src="dashboard-icons/log-out.png"/>
+            </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+    <main>
+
+        <!-- Main Top -->
+        <div class="top-right">
+            <button id="menu-btn">
+              <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="top-left">
+              <div class="info">
+                  <p>I'm <b>Ivan Vispo</b></p>
+                  <small class="text-muted">Admin</small>
+              </div>
+              <div class="profile-photo">
+                  <img src="all-images/Ivan Vispo Admin Profile.jpg"/>
+              </div>
+            </div>
+          </div>
+
+		  <!-- Calc Stock -->
+      <div id="main-cont" class="main-cont">
+      <!------------------------------- Table Data ------------------------------->
+            
+      <!-------------------- Table ------------->
+        <div class="content">
+          <div class="cont-top">
+            <div class="add">
+              <h3>Products</h3>
+              <div>
+                <button class="add-product" onclick="toggle()">Add New Product</button>
+                <button id="product-cat" class="add-category">Product Category</button>
+              </div>
+            </div>
+            <div class="entries-search">
+              <div class="search-box">
+                <button id="search-btn" class="search">Search</button>
+                <input type="text"  id="my-input" name="" placeholder="Name....">
+              </div>
+            </div>
+          </div>
+
+          <!--------------- Table --------------->
+          <div class="main-table">
+            <table id="stocks-table">
+              <thead>
+                <tr>
+                  <th>Product Code</th>
+                  <th>Product Name</th>
+                  <th>Qty</th>
+                  <th>Category</th>
+                  <th>Sizes</th>
+                  <th>Price</th>
+                  <th>Operations</th>
+                </tr>
+              </thead>
+              <tbody id="productList">
+                <!-- Data -->
+              </tbody>
+            </table>
+          </div>
+        <!-- Pagination -->
+          <nav class="btn" id="pagination">
+            <ul>
+              <li class="prev-btn"><a href="">Previous</a></li>
+              <li><a href="">1</a></li>
+              <li class="next-btn"><a href="">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+            
+      <!------------------------- Add Product Form -------------------------->
+      <div id="add-product" class="add-new-product">
+        <div class="header">
+          <span>Add New Product</span>
+          <div>
+            <img onclick="toggle()" src="all-icons/close.png"/>
+          </div>
+        </div>
+        <div class="form">
+          <div class="add-top">
+            Product Details
+          </div>
+          <div class="add-form">
+            <form id="productForm" action="/profile" method="POST" enctype="multipart/form-data">
+              <div class="form-grid">
+                <input type="text" id="idproduct" hidden>
+                <div class="form-group">
+                  <label for="name">Item</label>
+                  <input class="form-input" type="text" placeholder="Enter product title" name="name" id="name" autocomplete="off" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="brand">Size</label>
+                  <input class="form-input" type="text" placeholder="Enter size" name="sizes" id="sizes" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <label for="price">Product Price</label>
+                  <input class="form-input" type="number" placeholder="Enter product price" name="product-price" id="product-price" min="0" autocomplete="off" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="quantity">Quantity</label>
+                  <input class="form-input" type="number" placeholder="Enter quantity" name="quantity" id="quantity" min="0" autocomplete="off" required="required">
+                </div>
+
+                <div class="custom-select">
+                  <img src="all-icons/drop-down.png"/>
+                  <select name="supplier" id="supplier" autocomplete="off">
+                    <!-- Supplier Option -->
+                  </select>
+                </div>
+
+                <div class="custom-select">
+                  <img src="all-icons/drop-down.png"/>
+                  <select name="category" id="category" autocomplete="off">
+                    <!-- Category Option -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div class="btn">
+                <input id="btnAdd" type="submit" value="Add">
+                <input id="btnUpdate" type="submit" value="Update">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Category List -->
+      <div id="cat-list" class="cat-list">
+        <div class="cont-top">
+          <div class="close-btn">
+            <img id="close-btn-cat" src="all-icons/close.png"/>
+          </div>
+          <div class="add">
+            <h3>Product Category</h3>
+            <button id="add-cat" class="add-category">Add</button>
+          </div>
+          <div class="entries-search">
+            <div class="search-box">
+              <button id="search-btn" class="search">Search</button>
+              <input type="text"  id="my-input" name="" placeholder="Category Name....">
+            </div>
+          </div>
+        </div>
+
+        <div class="main-table">
+          <table id="category-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Category Name</th>
+                <th>Category Description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="categoryList">
+              <!-- Data -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add Category -->
+      <div id="add-new-cat" class="add-new-cat">
+        <img id="backtocatlist-icon" src="all-icons/back-icon.png"/>
+        <div class="category-name">
+          <label>Category Name</label>
+          <input id="cat-name" type="text">
+        </div>
+        <div class="category-description">
+          <label>Description</label>
+          <textarea name="" id="cat-descrip" cols="50" rows="4"></textarea>
+        </div>
+        <div>
+          <button id="cat-reset" class="cat-reset">Reset</button>
+          <button id="cat-save" class="cat-save">Save</button>
+          <button id="update-cat-btn" class="cat-update">Update</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!------ View Stocks --------->
+  <div id="view-stocks" class="view-stocks">
+    <!-- Data -->
+  </div>
+
+	<!-- Scriptfile link -->
+  <script src="--ALL-FUNCTIONALITY/All.js"></script>
+  <script src="--STOCKS/toggle.js"></script>
+  <script src="--STOCKS/view-update-delete.js"></script>
+  <script src="--STOCKS/functionSmall.js"></script>
+  <script src="src/stock.js"></script>
+</body>
+</html>

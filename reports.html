@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <title>Reports</title>
+		<link rel="stylesheet" href="--ALL-DESIGN/All.css">
+		<link rel="stylesheet" href="design-css/reports.css">
+</head>
+<body>
+	<div class="container">
+
+		<aside id="side">
+      <div class="top">
+        <div class="logo">
+          <img src="all-images/Business-logo.jpeg" width="50px">
+          <h2>VISPO</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <img src="all-icons/close.png"/>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a href="index.html">
+          <span>
+            <img src="dashboard-icons/health-data.png"/>
+          </span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="pos.html">
+          <span>
+            <img src="dashboard-icons/bill.png"/>
+          </span>
+          <h3>POS</h3>
+        </a>
+        <a href="transaction.html">
+          <span>
+            <img src="all-icons/bill.png"/>
+          </span>
+          <h3>Transaction</h3>
+        </a>
+        <a href="stocks.html">
+          <span>
+            <img src="dashboard-icons/cubes.png"/>
+          </span>
+          <h3>Stocks</h3>
+        </a>
+		<a href="supplier.html">
+			<span>
+			  <img src="all-icons/supplier.png"/>
+			</span>
+			<h3>Supplier</h3>
+		</a>
+        <a href="employee.html">
+          <span>
+            <img src="dashboard-icons/team.png"/>
+          </span>
+          <h3>Employee</h3>
+        </a>
+        <a href="reports.html" class="active">
+          <span>
+            <img src="dashboard-icons/report.png"/>
+          </span>
+          <h3>Reports</h3>
+        </a>
+		<a href="accounts.html">
+			<span>
+			  <img src="all-icons/skills.png"/>
+			</span>
+			<h3>Accounts Settings</h3>
+		</a>
+        <a href="logout.html">
+          <span>
+            <img src="dashboard-icons/log-out.png"/>
+          </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+		<!------------------------------ REPORTS ---------------------------->
+		<main>
+			<!-- Navigation -->
+			<div class="nav">
+				<button id="inv-report">Inventory Report</button>
+				<button id="sale-report">Sales Report</button>
+				<button id="pay">Payroll</button>
+			</div>
+
+			<!-- Button -->
+			<div id="inventory-report" class="inventory-report">
+				<div class="inv">
+					<button id="print-inventory">Print</button>
+					<button id="save-inventory">Save</button>
+				</div>
+				
+
+			<!------------------------------- Inventory Report ------------------------------->
+				<a id="save-to-image">
+					
+						<!-- Business Logo|Location -->
+						<div class="business-logo">
+							<img src="all-images/Business-logo.jpeg"/>
+							<div>
+								<h2>VISPO General Merchandise</h2>
+								<span>Ground Floor Stall#BSP 17, 18, 19 & 20 VICTORY MALL & MARKET, Tanauan City, Batangas</span>
+								<span>0909 374 7569</span>
+								<span>https://www.facebook.com/csvispo</span>
+							</div>
+						</div>
+
+						<div class="cont-top">
+							<h1>Inventory Report</h1>
+						</div>
+
+						<div class="inv-period">
+							<h3>Inventory Period: </h3>
+							<input type="date">
+						</div>
+						<div class="reporter">
+							<h3>Reporter:</h3>
+							<input id="reporter" class="report"/>
+						</div>
+						
+
+						<!-- Table -->
+						<div class="main-table">
+							<table id="usertable">
+								<thead>
+									<tr>
+										<th>Product Code</th>
+										<th>Product Name</th>
+										<th>Quantity</th>
+										<th>Category</th>
+										<th>Sizes</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody id="inventory-list">
+									<!-- Data -->
+								</tbody>
+							</table>
+						</div>
+				</a>
+			</div>
+
+			<!------------------------------ Sales Report ---------------------------------->
+			<div id="sales-report" class="sales-report">
+				<div class="sale">
+					<button id="print-sale">Print</button>
+					<button id="save-sale">Save</button>
+				</div>
+				
+			
+				<a id="save-to-image-sales">
+				
+					<!-- Business Logo|Location -->
+					<div class="business-logo">
+						<img src="all-images/Business-logo.jpeg"/>
+						<div>
+							<h2>VISPO General Merchandise</h2>
+							<span>Ground Floor Stall#BSP 17, 18, 19 & 20 VICTORY MALL & MARKET, Tanauan City, Batangas</span>
+							<span>0909 374 7569</span>
+							<span>https://www.facebook.com/csvispo</span>
+						</div>
+					</div>
+
+					<div class="cont-top">
+						<h1>Sales report</h1>
+					</div>
+
+					<div class="cont-mid">
+						<input id="sales-date" class="date" type="date">
+						<button id="search-sales-date" class="search-btn">Search</button>
+					</div>
+	
+					<!-- Table -->
+					<div class="main-table">
+						<table>
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>Products</th>
+									<th>Size</th>
+									<th>Price</th>  
+									<th>Quantity</th>
+									<th>Time Purchased</th>
+									<th>Date</th>
+									<th>Amount</th>
+								</tr>
+							</thead>
+							<tbody id="transaction-data">
+								<!-- Data -->						
+							</tbody>
+						</table>
+					</div>
+				</a>
+			</div>	
+
+			<!------------------------------- Payroll ----------------------------->
+			<div id="payroll" class="payroll">
+				<div class="pay"> 
+					<button id="payroll-print">Print</button>
+					<button id="payroll-save">Save</button>
+				</div>
+				
+				<a id="save-to-image-payroll">
+				
+					<!-- Business Logo|Location -->
+					<div class="business-logo">
+						<img src="all-images/Business-logo.jpeg"/>
+						<div>
+							<h2>VISPO General Merchandise</h2>
+							<span>Ground Floor Stall#BSP 17, 18, 19 & 20 VICTORY MALL & MARKET, Tanauan City, Batangas</span>
+							<span>0909 374 7569</span>
+							<span>https://www.facebook.com/csvispo</span>
+						</div>
+					</div>
+					
+					<div class="cont-top">
+						<h1>Payroll</h1>
+					</div>
+					<div class="main-table">
+						<table>
+							<thead>
+								<tr>
+									<th>Employee ID</th>
+									<th>Employee Name</th>
+									<th>Position</th>
+									<th>Pay method</th>
+									<th>Rate per day</th>
+									<th>No. of days</th>
+									<th>Gross Pay</th>
+								</tr>
+							</thead>
+							<tbody id="payroll-list-data">
+								<!-- Data -->
+							</tbody>
+						</table>
+					</div>
+				</a>
+			</div>
+			
+		</main>
+		
+
+	</div>
+	<script src="html2canvas.js"></script>
+	<script src="src/report.js"></script>
+</body>
+</html>

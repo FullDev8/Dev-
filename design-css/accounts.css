@@ -1,0 +1,173 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    width: 96%;
+    margin: 0 auto;
+    gap: 25px;
+  }
+  
+  /* ----------------------MAIN------------------ */
+  main {
+      margin-top: 20px;
+  }
+  
+  /* Top */
+  .top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .top-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+  }
+  
+  .top-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  
+    background-color: #fff;
+    padding: 8px 12px;
+  }
+
+	
+/*-------------------------------------- Supplier List--------------------------------------- */
+.supplier-list {
+	margin-top: 30px;
+	padding: 15px 20px;
+	background-color: var(--color-white);
+}
+
+.supplier-list.active {
+	display: none;
+}
+
+.cont-top .entries-search{
+	display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.entries-search .search-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+}
+
+.supplier-list input[type=search] {
+	border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+.cont-top .search {
+	background-color: rgb(188, 81, 81);
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+/*------ Tables design -------*/
+.add {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	gap: 10px;
+	border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+.add .add-product {
+	background-color: rgb(198, 82, 82);
+	color: var(--color-white);
+	padding: 3px 6px;
+	font-size: 11px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+/* Table */
+.main-table table {
+	width: 100%;
+	text-align: center;
+}
+
+.main-table tbody td {
+	height: 2.8rem;
+	border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+	color: var(--color-dark-variant);
+}
+
+	tbody {
+    display: block;
+    height: 315px;
+    overflow: auto;
+  }
+
+  thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;/* even columns width , fix width of table too*/
+  }
+
+  thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+  }
+
+  table {
+    width: 400px;
+  }
+
+/* Entries Indicator */
+.btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
+
+	padding: 15px 22px;
+}
+
+.prev-btn, .next-btn {
+	background-color: #fff;
+	color: var(--color-dark-variant);
+}
+
+.prev-btn {
+	font-size: 13px;
+	border: 1px solid rgba(21, 21, 21, 0.4);
+	border-right: none;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+.next-btn {
+	font-size: 13px;
+	border: 1px solid rgba(21, 21, 21, 0.4);
+	border-left: none;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+.count {
+	background-color: rgb(198, 82, 82);
+	color: white;
+	padding: 2px 6px;
+	border-top: 1px solid rgba(21, 21, 21, 0.4);
+	border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+}
+
+input[type="text"] {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 2px;
+}

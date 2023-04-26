@@ -1,0 +1,473 @@
+
+/* ------------------------------CONTAINER------------------------ */
+.container {
+  position: relative;
+
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 25px;
+  grid-template-columns: 190px 1fr 300px;
+}
+
+/* ------------------MAIN------------------- */
+
+main {
+  margin-top: 20px;
+}
+
+main .date {
+  display: inline-block;
+  background: var(--color-light);
+  border-radius: var(--border-radius-1);
+  margin-top: 8px;
+  padding: 4px 10px;
+}
+
+main .date input[type='date'] {
+  background: transparent;
+  color: var(--color-dark);
+}
+
+main .search-date {
+  padding: 5px 10px;
+  background-color: rgb(214, 73, 73);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+main .insights > div {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 10px;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+main .insights > div:hover {
+  box-shadow: none;
+}
+
+main .insights > div span img {
+  width: 20px;
+}
+
+main .insights > div .middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .insights > div .middle .left h1 {
+  display: block
+}
+
+main .insights h3 {
+  margin: 10px 0 5px;
+  font-size: 10px
+}
+
+main .insights .progress {
+  display: flex;
+  align-items: center;
+}
+
+main .insights .progress .percentage {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main .insights small {
+  margin-top: 19px;
+  display: block;
+}
+
+/*Recent Orders*/
+
+main .recent-orders {
+  margin-top: 25px; 
+}
+
+tbody {
+  display: block;
+  height: 270px;
+  overflow: auto;
+}
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;/* even columns width , fix width of table too*/
+}
+thead {
+  width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+  width: 400px;
+}
+
+/*------------Scroll bar--------*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+main .recent-orders h2 {
+  margin-bottom: 9px;
+}
+
+main .recent-orders table {
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+main .recent-orders a {
+  text-align: center;
+  display: block;
+  margin: 14px auto;
+  color: var(--color-primary);
+}
+
+/*Right-Section*/
+
+/*Right-top*/
+
+.right {
+  margin: 16px;
+}
+
+.right .top {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.right .top button {
+  display: none;
+}
+
+.right .top .profile {
+  display: flex;
+  gap: 24px;
+  text-align: right;
+}
+
+/* Product Notification */
+.right .product-notification {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right .product-notification:hover {
+  box-shadow: none;
+}
+
+.right .product-notification .notification img {
+  width: 30px;
+}
+
+.alert-div {
+  display: none;
+}
+
+.alert-div.active {
+  display: block;
+}
+
+.right .product-notification .notification {
+  position: relative;
+}
+
+.right .product-notification .notification .notifications-count {
+  display: none;
+
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  background-color: red;
+  /*
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 5px;
+  */
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.right .product-notification .notification .notifications-count.active {
+  display: block;
+}
+
+/*Sales-analytics*/
+
+.right .sales-analytics {
+  margin-top: 24px;
+}
+
+.right .sales-analytics h2 {
+  margin-bottom: 7px;
+}
+
+.right .sales-analytics .item {
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  padding: 12px var(--card-padding);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right .sales-analytics .item:hover {
+  box-shadow: none;
+}
+
+.right .sales-analytics .item .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+
+.right .sales-analytics .item .icon {
+  display: flex;
+  padding: 1px;
+}
+
+.right .sales-analytics .add-product {
+  background-color: transparent;
+  border: 2px dashed rgb(198, 82, 82);
+  color: rgb(198, 82, 82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .sales-analytics .add-product div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.right .sales-analytics .add-product div h3 {
+  font-weight: 700;
+}
+
+/*------MEDIA QUERIES-------*/
+
+/*-----For tablets and small laptops-------*/
+@media screen and (max-width: 1200px) {
+
+  .container {
+    width: 94%;
+    grid-template-columns: 100px auto 300px;
+  }
+
+  aside .logo h2 {
+    display: none;
+  }
+
+  aside h3 {
+    display: none;
+  }
+
+  aside .sidebar a {
+    width: 50px;
+  }
+
+  aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 24px 125px 0 125px;
+  }
+
+  main table thead tr th:last-child,
+  main table thead tr th:first-child {
+    display: none;
+  }
+
+  main table tbody tr td:last-child,
+  main table tbody tr td:first-child {
+    display: none;
+  }
+}
+
+/*--------For Mobile phones--------*/
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    position: fixed;
+    left: -100%;
+    background-color: var(--color-white);
+    width: 200px;
+    z-index: 100;
+    box-shadow: 10px 37px 52px var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+
+  aside .logo {
+    margin-left: 10px;
+  }
+
+  aside .logo h2 {
+    display: inline;
+  }
+
+  aside .sidebar h3 {
+    display: inline;
+  }
+
+  aside .sidebar a {
+    width: 100%;
+    height: 35px;
+  }
+
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 3;
+  }
+
+  aside .menu-icon .menu {
+    cursor: pointer;
+  }
+
+  main {
+    margin-top: 80px;
+    padding: 0 12px;
+  }
+
+  main .recent-orders {
+    position: relative;
+    margin: 32px 0 0 0;
+    width: 100%;
+  }
+
+  main .recent-orders table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .right {
+    width: 94%;
+    margin: 0 auto 50px;
+  }
+
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0px 10px;
+    height: 60px;
+    background-color: var(--color-white);
+    width: 100%;
+    margin: 0;
+    z-index: 3;
+    box-shadow: 0 12px 13px var(--color-light);
+  }
+
+  .right .top .theme-toggler {
+    width: 60px;
+    position: absolute;
+    left: 66%;
+  }
+
+  .right .top .profile .profile-photo {
+    margin-left: 16px;
+  }
+
+  .right .top .info {
+    display: none;
+  }
+
+  .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
+    position: absolute;
+    left: 16px;
+  }
+
+  aside .top .close {
+    display: inline-block;
+  }
+}
+

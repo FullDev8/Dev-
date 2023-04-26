@@ -1,0 +1,303 @@
+
+
+/* ------------------------------CONTAINER------------------------ */
+.container {
+  position: relative;
+  
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 25px;
+  grid-template-columns: 190px 1fr;
+} 
+
+main {
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+main button {
+  margin: 5px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.inventory-report, .sales-report, .payroll {
+  padding-bottom: 30px;
+}
+
+/* Navigation */
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.top  .close img {
+	width: 20px;
+}
+
+.nav {
+  background-color: rgb(198, 82, 82);
+	display: flex;
+	flex-direction: row;
+}
+
+.nav button {
+	background-color: rgb(198, 82, 82);
+	color: #fff;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.nav button:hover {
+  background-color: rgb(124, 54, 54);
+}
+
+
+/* ------------------CONTENT----------------- */
+.cont-top {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.business-logo img {
+  width: 140px;
+}
+.business-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.business-logo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.inv-period, .reporter {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+/* Inventory Report */
+.inventory-report {
+	margin-top: 30px;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+}
+
+.inventory-report.active {
+  display: none;
+}
+
+.inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.inventory-report .cont-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory-report .cont-top h1 {
+  text-align: center;
+  width: 250px;
+  border-top: 1px solid rgba(14, 14, 14, 0.4);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+.inventory-report .reporter .report {
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+#print-inventory {
+  background-color: rgb(198, 82, 82);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+#save-inventory {
+  background-color: #fff;
+  color: rgb(198, 82, 82);
+  border: 1px solid rgb(198, 82, 82);
+  border-radius: 3px;
+}
+
+/* Sales Report */
+.sales-report {
+  margin-top: 30px;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+
+  display: none;
+}
+
+.sales-report.active {
+  display: block;
+}
+
+.sale {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.sales-report .cont-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sales-report .cont-top h1 {
+  text-align: center;
+  width: 250px;
+  border-top: 1px solid rgba(14, 14, 14, 0.4);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+
+.cont-mid input[type="date"] {
+  border: 1px solid rgba(21, 21, 21, 0.4);
+  border-radius: 2px;
+}
+
+.cont-mid .search-btn {
+  background-color: rgb(198, 82, 82);
+  color: var(--color-white);
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Table */
+.main-table table {
+  width: 100%;
+  text-align: center;
+}
+
+.main-table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+  color: var(--color-dark-variant);
+}
+
+
+#print-sale {
+  background-color: rgb(198, 82, 82);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+#save-sale {
+  background-color: #fff;
+  color: rgb(198, 82, 82);
+  border: 1px solid rgb(198, 82, 82);
+  border-radius: 3px;
+}
+
+/* Payroll */
+.payroll {
+	margin-top: 30px;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+
+  display: none;
+}
+
+.payroll.active {
+  display: block;
+}
+
+
+.pay {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.payroll .cont-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payroll .cont-top h1 {
+  text-align: center;
+  width: 250px;
+  border-top: 1px solid rgba(14, 14, 14, 0.4);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+}
+
+
+#payroll-print{
+  background-color: rgb(198, 82, 82);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+#payroll-save {
+  background-color: #fff;
+  color: rgb(198, 82, 82);
+  border: 1px solid rgb(198, 82, 82);
+  border-radius: 3px;
+}
+
+@media print {
+  .inventory-report, .sales-report, .payroll {
+    max-width: unset;
+    box-shadow: none;
+    border: 0px;
+    background-color: #fff; 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 12.7px;
+    padding: 15px;
+  }
+
+  #print-inventory, #save-inventory {
+    display: none;
+  }
+
+  #reporter {
+    border: none;
+  }
+
+  #print-sale, #save-sale {
+    display: none;
+  }
+
+  .cont-mid .date, .cont-mid .search-btn {
+    display: none;
+  }
+
+  #payroll-print, #payroll-save {
+    display: none;
+  }
+
+  table { page-break-after:auto }
+  tr    { page-break-inside:avoid; page-break-after:auto }
+  td    { page-break-inside:avoid; page-break-after:auto }
+  thead { display:table-header-group }
+  tfoot { display:table-footer-group }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+    <link rel="stylesheet" href="--ALL-DESIGN/All.css">
+    <link rel="stylesheet" href="design-css/transaction.css">
+    <title>Transaction | IMS</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Side Top -->
+    <aside id="side">
+      <div class="top">
+        <div class="logo">
+          <img src="all-images/Business-logo.jpeg" width="50px">
+          <h2>VISPO</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp">close</span>
+        </div>
+      </div>
+      <!-- Side Nav -->
+      <div class="sidebar">
+        <a href="index.html">
+          <span>
+            <img src="dashboard-icons/health-data.png"/>
+          </span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="pos.html">
+          <span>
+            <img src="dashboard-icons/bill.png"/>
+          </span>
+          <h3>POS</h3>
+        </a>
+        <a href="transaction.html" class="active">
+          <span>
+            <img src="all-icons/bill.png"/>
+          </span>
+          <h3>Transaction</h3>
+        </a>
+        <a href="stocks.html">
+          <span>
+            <img src="dashboard-icons/cubes.png"/>
+          </span>
+          <h3>Stocks</h3>
+        </a>
+        <a href="supplier.html">
+          <span>
+            <img src="all-icons/supplier.png"/>
+          </span>
+          <h3>Supplier</h3>
+        </a>
+        <a href="employee.html">
+          <span>
+            <img src="dashboard-icons/team.png"/>
+          </span>
+          <h3>Employee</h3>
+        </a>
+        <a href="reports.html">
+          <span>
+            <img src="dashboard-icons/report.png"/>
+          </span>
+          <h3>Reports</h3>
+        </a>
+        <a href="accounts.html">
+          <span>
+            <img src="all-icons/skills.png"/>
+          </span>
+          <h3>Accounts Settings</h3>
+        </a>
+        <a href="#">
+          <span>
+            <img src="dashboard-icons/log-out.png"/>
+          </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- Main Top -->
+      <div class="top-right">
+        <button id="menu-btn">
+          <span class="material-icons-sharp">menu</span>
+        </button>
+        <div class="top-left">
+          <div class="info">
+              <p>I'm <b>Ivan Vispo</b></p>
+              <small class="text-muted">Admin</small>
+          </div>
+          <div class="profile-photo">
+              <img src="all-images/Ivan Vispo Admin Profile.jpg"/>
+          </div>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="transac-cont">
+        <div class="cont-top">
+          <h3>Transaction Date</h3>
+        </div>
+
+        <div class="main-table">
+          <table id="">
+            <thead>
+              <tr>
+                <th>Product Code</th>
+                <th>Products</th>
+                <th>Size</th>
+                <th>Price</th>  
+                <th>Quantity</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="transaction-data">
+              <!-- Data -->
+            </tbody>
+            
+          </table>
+        </div>
+        <div class="btn">
+          <button class="prev-btn">Previous</button>
+          <div class="count">1</div>
+          <button class="next-btn">Next</button>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+
+  <script src="--ALL-FUNCTIONALITY/All.js"></script>
+  <script src="src/transaction.js"></script>
+  
+</body>
+</html>

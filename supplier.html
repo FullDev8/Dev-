@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+		<link rel="stylesheet" href="--ALL-DESIGN/All.css">
+    <link rel="stylesheet" href="design-css/supplier.css">
+    <title>Supplier</title>
+</head>
+<body>
+  <div id="background" class="container">
+     <!--Left-->
+     <aside id="side">
+      <div class="top">
+        <div class="logo">
+          <img src="all-images/Business-logo.jpeg" width="50px">
+          <h2>VISPO</h2> 
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp">close</span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a href="index.html">
+          <span>
+            <img src="dashboard-icons/health-data.png"/>
+          </span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="pos.html">
+          <span>
+            <img src="dashboard-icons/bill.png"/>
+          </span>
+          <h3>POS</h3>
+        </a>
+        <a href="transaction.html">
+          <span>
+            <img src="all-icons/bill.png"/>
+          </span>
+          <h3>Transaction</h3>
+        </a>
+        <a href="stocks.html">
+          <span>
+            <img src="dashboard-icons/cubes.png"/>
+          </span>
+          <h3>Stocks</h3>
+        </a>
+        <a href="supplier.html" class="active">
+          <span>
+            <img src="all-icons/supplier.png"/>
+          </span>
+          <h3>Supplier</h3>
+        </a>
+        <a href="employee.html">
+          <span>
+            <img src="dashboard-icons/team.png"/>
+          </span>
+          <h3>Employee</h3>
+        </a>
+        <a href="reports.html">
+          <span>
+            <img src="dashboard-icons/report.png"/>
+          </span>
+          <h3>Reports</h3>
+        </a>
+        <a href="accounts.html">
+          <span>
+            <img src="all-icons/skills.png"/>
+          </span>
+          <h3>Accounts Settings</h3>
+        </a>
+       
+        <a href="logout.html">
+          <span>
+            <img src="dashboard-icons/log-out.png"/>
+          </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+    <!--End of Aside-->
+
+    <main>
+       <!-- Main Top -->
+       <div class="top-right">
+        <div class="top-left">
+          <div class="info">
+              <p>I'm <b>Ivan Vispo</b></p>
+              <small class="text-muted">Admin</small>
+          </div>
+          <div class="profile-photo">
+              <img src="all-images/Ivan Vispo Admin Profile.jpg"/>
+          </div>
+        </div>
+      </div>
+
+       <!-- Main -->
+       <div class="supplier-list">
+          <div class="cont-top">
+            <div class="add">
+              <h3>Supplier Info</h3>
+              <button id="add-supplier" class="add-product">Add</button>
+              <span>
+                <img src="all-icons/add-new.png"/>
+              </span>
+            </div>
+            <div class="entries-search">
+              <div class="search-box">
+                <button id="search-btn" class="search">Search</button>
+                <input type="search">
+              </div>
+            </div>
+          </div>
+
+        <div class="main-table">
+          <table id="">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Supplier Name</th>
+                <th>Company</th>
+                <th>Contact</th>  
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="supplier-data">
+              <!-- Data -->
+            </tbody>
+            
+          </table>
+        </div>
+        <div class="btn">
+          <button class="prev-btn">Previous</button>
+          <div class="count">1</div>
+          <button class="next-btn">Next</button>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  
+  <!-- Add Supplier List -->
+  <div id="popup" class="add-employee-information" >
+    <div class="employee-header">
+      <h3>Add Supplier List</h3>
+    </div>
+    <div class="employee-body">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <span>Name</span>
+          <input id="supplier-name" type="text" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <span>Company</span>
+          <input id="supplier-company" type="text" placeholder="Company" required>
+        </div>
+        <div class="form-group">
+          <span>Contact</span>
+          <input id="supplier-contact" type="text" placeholder="Contact" required>
+        </div>
+        <div class="employee-footer">
+          <button id="close-add-btn" class="employee-close-btn">Close</button>
+          <input id="employee-ADD" type="submit" value="ADD"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="src/supplier.js"></script>
+</body>
+</html>
